@@ -11,7 +11,9 @@ namespace СaesarСipherApp
     {
         static void Main(string[] args)
         {
-            CaesarCipher encodetext = new CaesarCipher(Console.ReadLine(),3);
+            Console.WriteLine("Type <text> <key> <operation (Encode or Decode)>separated by a space:");
+            string[] iv_concole_str = Console.ReadLine().Split();
+            CaesarCipher encodetext = new CaesarCipher(iv_concole_str[0], Convert.ToInt32(iv_concole_str[1]), iv_concole_str[2]);
             Console.WriteLine(encodetext.ev_text);
             Console.ReadKey();
         }
