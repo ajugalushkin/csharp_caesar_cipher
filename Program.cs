@@ -11,7 +11,9 @@ namespace СaesarСipherApp
     {
         static void Main(string[] args)
         {
-
+            CaesarCipher encodetext = new CaesarCipher(Console.ReadLine());
+            Console.WriteLine(encodetext);
+            Console.ReadKey();
         }
     }
 }
